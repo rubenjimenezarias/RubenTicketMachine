@@ -109,4 +109,14 @@ public class TicketMachine
         amountLeftToPay = price - balance;
         return amountLeftToPay;
     }
+    
+     /**
+     *Metod to return all money
+     */
+    public int getEmptyMachine()
+    {
+        int emptyMachine = total;
+        total = 0;
+        return emptyMachine;
+    }
 }
