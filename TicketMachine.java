@@ -120,10 +120,20 @@ public class TicketMachine
         total = 0;
         return emptyMachine;
     }
-    
     /**
-     * Buy a ticket with discount 10%
+     * (Cambio el precio del ticket para sacar un ticket con descuento y asi no modificar los otros metodos)
+     * Metod change price - discount.
      */
+    public void setTicketDiscount()
+    {
+        price = price * 0.90;
+    }
+    /**
+     * ----------------------(ESTO FUE LA PRIMERA PRUEBA)-----------------------------
+     * ----------(HE VISTO ERRORES Y MODIFICO ANULANDO ESTE METODO)--------------------
+     * 
+     * Buy a ticket with discount 10%
+     *
     public void printTicketDiscount10()
      {
         double discount = 0.90;
@@ -149,4 +159,5 @@ public class TicketMachine
                     
         }
     }
+    */
 }
