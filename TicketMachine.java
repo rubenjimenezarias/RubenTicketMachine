@@ -17,15 +17,21 @@ public class TicketMachine
     private double balance;
     // The total amount of money collected by this machine.
     private double total;
+    
+    private double discountPrice;
+    
+    private double discount;
 
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(double cost)
+    public TicketMachine(double cost, double percentageDiscount)
     {
         price = cost;
         balance = 0;
         total = 0;
+        discountPrice = price-(price*percentageDiscount/100);
+        discount = percentageDiscount;
     }
 
     /**
@@ -120,24 +126,26 @@ public class TicketMachine
         total = 0;
         return emptyMachine;
     }
+    
     /**
      * (Cambio el precio del ticket para sacar un ticket con descuento y asi no modificar los otros metodos)
      * Metod change price - discount.
-     */
+     
     public void setTicketDiscount()
     {
         price = price * 0.90;
     }
+    */
+    
     /**
      * ----------------------(ESTO FUE LA PRIMERA PRUEBA)-----------------------------
      * ----------(HE VISTO ERRORES Y MODIFICO ANULANDO ESTE METODO)--------------------
      * 
      * Buy a ticket with discount 10%
      *
+     */
     public void printTicketDiscount10()
      {
-        double discount = 0.90;
-        double discountPrice = price*discount;
         if(balance >= discountPrice) {
             // Simulate the printing of a ticket.
             System.out.println("##################");
@@ -159,5 +167,4 @@ public class TicketMachine
                     
         }
     }
-    */
 }
